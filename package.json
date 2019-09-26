@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Mocking Spongebob",
   "main": "app.js",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
   "dependencies": {
     "discord.js": "^11.5.1"
   },
