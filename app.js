@@ -25,12 +25,21 @@ function createMockingText(sentence){
     return mockingText;
 }
 
+function sendMockingText(text,user,webhook){
+    console.log('Trying to send message via webhook');
+    return webhook.send(text, {
+        username:user.username,
+        avatarURL:user.avatarURL
+    });
+}
+
 client.on('message', msg => {
     content = msg.content;
     channel = msg.channel;
     user = msg.author;
     //TODO Replace !sponge with bot mention
     if (content.startsWith('!sponge')) {
+        var mockingText = createMockingText(content.replace('!sponge ','').toLowerCase());
         console.log('Trying to fetch webhooks...');
         hook = channel.fetchWebhooks()
             .then(webhooks => {
@@ -39,24 +48,19 @@ client.on('message', msg => {
                 for(webhook of webhooks.values()){
                     if(webhook.owner.id == client.user.id){
                         console.log('Found valid Webhook');
-                        hook = webhook;
+                        sendMockingText(mockingText,user,webhook).then(msg.delete());
+                        return;
                     }
                 }
-                if(hook==undefined){
-                    console.log('Creating new Webhook');
-                    //TODO Have to wait until webhook actually got created before using it
-                    hook = channel.createWebhook('Example Webhook', 'https://i.imgur.com/p2qNFag.png');
-                }
-                console.log('Trying to send message via webhook');
-                var mockingText = createMockingText(content.replace('!sponge ','').toLowerCase());
-                hook.send(mockingText, {
-                    username:user.username,
-                    avatarURL:user.avatarURL
-                });
-                msg.delete();
+
+                console.log('Creating new Webhook');
+                channel.createWebhook('SpongeBot', 'https://i.imgur.com/p2qNFag.png')
+                    .then(webhook => sendMockingText(mockingText,user,webhook))
+                    .then(msg.delete()
+                );
             }
         ).catch(console.error);
     }
 });
 
-client.login(token);
+client.login('NjI2Njk3MzIzMDU3MTE5MjQ0.XY-ZiQ.KUiLZ8l5TiZ52Hi2yYtLq68jBEY');
