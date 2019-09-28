@@ -4,8 +4,7 @@ mOcKiNg SpOnGeBoB bOt
 
 ### Usage
 Simply type ``!sponge`` Followed by the message you wan't to mock
-The first time the command gets run in a new channel the bot doesn't work as it first has to create a webhook for that channel.
-After that it shouldn't have any problems
+To add click this link
 
 https://discordapp.com/api/oauth2/authorize?client_id=626697323057119244&permissions=540403776&scope=bot
 
