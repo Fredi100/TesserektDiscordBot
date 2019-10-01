@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = process.env.TOKEN;
 
+const botName = 'SpongeBot';
 const botPic = 'https://cdn.discordapp.com/avatars/626697323057119244/dcefdb851b9cd88cc9cd19d6275cdbb8.png';
 
 client.on('ready', () => {
@@ -35,42 +36,32 @@ function sendWebhookText(text,user,webhook){
     });
 }
 
-client.on('message', msg => {
-    content = msg.content;
-    channel = msg.channel;
-    user = msg.author;
-    //TODO Replace !sponge with bot mention
-    if (content.startsWith('!sponge')) {
-        var mockingText = createMockingText(content.replace('!sponge ','').toLowerCase());
-        console.log('Trying to fetch webhooks...');
-        channel.fetchWebhooks().then(webhooks => {
-            console.log('Checking existing Webhooks');
-            let hook;
-            for(webhook of webhooks.values()){
-                if(webhook.owner.id == client.user.id){
-                    console.log('Found valid Webhook');
-                    sendWebhookText(mockingText,user,webhook).then(msg.delete());
-                    return;
-                }
-            }
+async function commandReally(text,channel,user){
+    console.log('commandReally');
+    var action = text.replace('!really ','');
+    var webhook = await channel.createWebhook(botName,botPic);
+    await webhook.send('Ich würde gerne '+action,{username:user.username,avatarURL:user.avatarURL});
+    await channel.send('Wirklich?');
+    await webhook.send('Nö',{username:user.username,avatarURL:user.avatarURL});
+    webhook.delete('Not needed');
+}
 
-            console.log('Creating new Webhook');
-            channel.createWebhook('SpongeBot', botPic)
-                .then(webhook => sendWebhookText(mockingText,user,webhook))
-                .then(msg.delete()
-            );
-        }).catch(console.error);
-    }else if(content.startsWith('!really')){
-        //TODO Hier den text vom user lesen
-        //TODO Danach 3 Nachrichten verschicken
-        //TODO Erste Nachricht im Namen des Users
-        // Ich würde gerne [action]
-        //TODO Zweite Nachricht vom Bot selber
-        // Wirklich?
-        // TODO Dritte Nachricht im Namen des Users
-        // Nein...
-        // TODO Command selber wieder löschen
+function commandMock(text,channel,user){
+    console.log('commandMock');
+    var mockingText = createMockingText(text.replace('!sponge ','').toLowerCase());
+    var webhook = await channel.createWebhook(botName,botPic)
+    await sendWebhookText(mockingText,user,webhook);
+    webhook.delete();
+}
+
+client.on('message', msg => {
+    if (msg.content.startsWith('!sponge')) {
+        commandMock(msg.content,msg.channel,msg.author);
+        msg.delete();
+    }else if(msg.content.startsWith('!really')){
+        commandReally(msg.content,msg.channel,msg.author);
+        msg.delete();
     }
 });
 
-client.login(token);
+client.login('NjI2Njk3MzIzMDU3MTE5MjQ0.XZNsBA.li0QgOFYf46CboqAmVCpPGqcQMs');
