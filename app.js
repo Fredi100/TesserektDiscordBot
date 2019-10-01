@@ -46,7 +46,7 @@ async function commandReally(text,channel,user){
     webhook.delete('Not needed');
 }
 
-function commandMock(text,channel,user){
+async function commandMock(text,channel,user){
     console.log('commandMock');
     var mockingText = createMockingText(text.replace('!sponge ','').toLowerCase());
     var webhook = await channel.createWebhook(botName,botPic)
