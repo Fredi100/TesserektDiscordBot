@@ -59,6 +59,11 @@ async function hashtagTechnology(channel){
     channel.send('',{files: ['./media/technology.gif']});
 }
 
+async function hashtagFuture(channel){
+    console.log('hashtagFuture');
+    channel.send('',{files: [':/media/future.gif']});
+}
+
 client.on('message', msg => {
     if (msg.content.startsWith('!sponge')) {
         commandMock(msg.content,msg.channel,msg.author);
@@ -68,6 +73,8 @@ client.on('message', msg => {
         msg.delete();
     }else if(msg.content.endsWith('#technology')){
         hashtagTechnology(msg.channel);
+    }else if(msg.content.endsWith('#future')){
+        hashtagFuture(msg.channel);
     }
 });
 
