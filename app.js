@@ -54,6 +54,11 @@ async function commandMock(text,channel,user){
     webhook.delete();
 }
 
+async function hashtagTechnology(channel){
+    console.log('hashtagTechnology');
+    channel.send('',{files: ['./media/technology.gif']});
+}
+
 client.on('message', msg => {
     if (msg.content.startsWith('!sponge')) {
         commandMock(msg.content,msg.channel,msg.author);
@@ -61,6 +66,8 @@ client.on('message', msg => {
     }else if(msg.content.startsWith('!really')){
         commandReally(msg.content,msg.channel,msg.author);
         msg.delete();
+    }else if(msg.content.endsWith('#technology')){
+        hashtagTechnology(msg.channel);
     }
 });
 
