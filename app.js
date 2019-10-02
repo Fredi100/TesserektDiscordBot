@@ -61,7 +61,12 @@ async function hashtagTechnology(channel){
 
 async function hashtagFuture(channel){
     console.log('hashtagFuture');
-    channel.send('',{files: [':/media/future.gif']});
+    channel.send('',{files: ['./media/future.gif']});
+}
+
+async function hashtagImagination(channel){
+    console.log('hashtagImagination');
+    channel.send('',{files: ['./media/imagination.gif']});
 }
 
 client.on('message', msg => {
@@ -75,6 +80,8 @@ client.on('message', msg => {
         hashtagTechnology(msg.channel);
     }else if(msg.content.endsWith('#future')){
         hashtagFuture(msg.channel);
+    }else if(msg.content.endsWith('#imagination')){
+        hashtagImagination(msg.channel);
     }
 });
 
