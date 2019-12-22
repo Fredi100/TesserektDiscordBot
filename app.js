@@ -1,6 +1,7 @@
+require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const token = process.env.TOKEN;
+const TOKEN = process.env.TOKEN;
 
 const botName = 'SpongeBot';
 const botPic = 'https://cdn.discordapp.com/avatars/626697323057119244/dcefdb851b9cd88cc9cd19d6275cdbb8.png';
@@ -85,4 +86,4 @@ client.on('message', msg => {
     }
 });
 
-client.login(token);
+client.login(TOKEN);
