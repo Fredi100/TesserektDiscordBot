@@ -1,0 +1,28 @@
+{
+  "name": "meshinbot",
+  "version": "1.0.0",
+  "description": "Noch Fragen?",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fredi100/MeshinBot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "Alfred Emsenhuber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fredi100/MeshinBot/issues"
+  },
+  "homepage": "https://github.com/Fredi100/MeshinBot#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0"
+  }
+}
