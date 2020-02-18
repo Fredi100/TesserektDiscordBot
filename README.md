@@ -6,9 +6,7 @@ mOcKiNg SpOnGeBoB bOt
 * ``!sponge`` followed by a message
 * ``!really`` followed by an action
 
-To add click this link
-
-https://discordapp.com/api/oauth2/authorize?client_id=626697323057119244&permissions=540403776&scope=bot
+To add click this [link](https://discordapp.com/api/oauth2/authorize?client_id=626697323057119244&permissions=540403776&scope=bot)
 
 ### Installation
 * Clone with git
