@@ -2,7 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
-//const TOKEN = process.env.TOKEN;
+const TOKEN = process.env.TOKEN;
 
 // TODO Maybe not necessary to save this as I don't work with webhooks this time
 const botName = 'MeshinBot';
