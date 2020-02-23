@@ -1,0 +1,29 @@
+{
+  "name": "spongebot",
+  "version": "1.0.0",
+  "description": "Mocking Spongebob",
+  "main": "app.js",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fredi100/SpongeBot.git"
+  },
+  "author": "Alfred Emsenhuber",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Fredi100/SpongeBot/issues"
+  },
+  "homepage": "https://github.com/Fredi100/SpongeBot#readme"
+}
