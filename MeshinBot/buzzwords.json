@@ -1,0 +1,15 @@
+{
+    "text" : "Noch Fragen?\nWenn nicht, dann gibt es nachfolgend einige...\n",
+    "buzzwords" : [
+        "Natural Language Processing",
+        "Reinforcement Learning",
+        "Deep Learning",
+        "Neural Networks",
+        "Iterative Deepening",
+        "Propositional Calculus",
+        "First Order Predicate Calculus",
+        "Heuristic Search",
+        "Bayesian Networks"
+    ],
+    "amount" : 9
+}
