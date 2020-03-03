@@ -1,7 +1,7 @@
 {
-  "name": "spongebot",
+  "name": "tesserektbot",
   "version": "1.0.0",
-  "description": "Mocking Spongebob",
+  "description": "General Purpose Tesserekt Discord Bot",
   "main": "app.js",
   "engines": {
     "node": ">=10.0.0",
@@ -18,12 +18,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Fredi100/SpongeBot.git"
+    "url": "git+https://github.com/Fredi100/TesserektDiscordBots.git"
   },
   "author": "Alfred Emsenhuber",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Fredi100/SpongeBot/issues"
+    "url": "https://github.com/Fredi100/TesserektDiscordBots/issues"
   },
-  "homepage": "https://github.com/Fredi100/SpongeBot#readme"
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "homepage": "https://github.com/Fredi100/TesserektDiscordBots#readme"
 }
