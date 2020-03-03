@@ -1,5 +1,7 @@
 # TesserektDiscordBots
 
+For adding this bot to your server click following [Link](https://discordapp.com/api/oauth2/authorize?client_id=305034890011869194&permissions=537394240&scope=bot)
+
 For adding bots as services in Linux: [Link](https://tibbo.com/linux/nodejs/service-file.html)
 
 ## Sponge Commands
