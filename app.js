@@ -3,13 +3,14 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const TOKEN = process.env.TOKEN;
 
-const botName = 'SpongeBot';
-const botPic = 'https://cdn.discordapp.com/avatars/626697323057119244/dcefdb851b9cd88cc9cd19d6275cdbb8.png';
+const botName = 'TesserektBot';
+const botPic = 'https://cdn.discordapp.com/avatars/626697323057119244/dcefdb851b9cd88cc9cd19d6275cdbb8.png'; // Change to a general Pic
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
+// Takes a sentance as a String and mocks it
 function createMockingText(sentence){
     var mockingText = "";
     var size = Math.random() < 0.5;
@@ -29,6 +30,7 @@ function createMockingText(sentence){
     return mockingText;
 }
 
+// Takes a text, the user the bot should impersonate and the given webhook to send it to
 function sendWebhookText(text,user,webhook){
     console.log('Trying to send message via webhook');
     return webhook.send(text, {
