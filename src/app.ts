@@ -19,6 +19,14 @@ export class TesserektBot {
     @On('ready')
     async onReady(client: Client) {
         console.log(`Logged in as ${client.user.tag}!`);
+        client.user.setStatus('online');
+        client.user.setPresence({
+            game: {
+                name: 'GitHub',
+                type: 'WATCHING',
+                url: 'https://github.com/Fredi100/TesserektDiscordBot'
+            }
+        })
     }
 
     @On('message')
