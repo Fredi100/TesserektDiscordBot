@@ -8,8 +8,12 @@
     "npm": ">=6.0.0"
   },
   "dependencies": {
-    "discord.js": "^11.5.1",
-    "dotenv": "^8.2.0"
+    "@typeit/discord": "^1.0.3",
+    "@types/node": "^13.7.7",
+    "discord.js": "^11.6.1",
+    "dotenv": "^8.2.0",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^1.11.1"
   },
   "devDependencies": {},
   "scripts": {

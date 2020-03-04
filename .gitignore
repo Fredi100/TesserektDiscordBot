@@ -60,5 +60,7 @@ typings/
 # next.js build output
 .next
 
-token.json
+# TypeScript build output
+build
+
 package-lock.json
