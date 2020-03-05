@@ -1,37 +1,43 @@
 {
-  "name": "tesserektbot",
-  "version": "1.0.0",
-  "description": "General Purpose Tesserekt Discord Bot",
-  "main": "app.js",
-  "engines": {
-    "node": ">=10.0.0",
-    "npm": ">=6.0.0"
-  },
-  "dependencies": {
-    "@typeit/discord": "^1.0.3",
-    "@types/node": "^13.7.7",
-    "discord.js": "^11.6.1",
-    "dotenv": "^8.2.0",
-    "reflect-metadata": "^0.1.13",
-    "tslib": "^1.11.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Fredi100/TesserektDiscordBots.git"
-  },
-  "author": "Alfred Emsenhuber",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/Fredi100/TesserektDiscordBots/issues"
-  },
-  "keywords": [
-    "discord",
-    "bot"
-  ],
-  "homepage": "https://github.com/Fredi100/TesserektDiscordBots#readme"
+    "name": "tesserektbot",
+    "version": "1.0.0",
+    "description": "General Purpose Tesserekt Discord Bot",
+    "main": "app.js",
+    "engines": {
+        "node": ">=10.0.0",
+        "npm": ">=6.0.0"
+    },
+    "dependencies": {
+        "@typeit/discord": "^1.0.3",
+        "@types/node": "^13.7.7",
+        "discord.js": "^11.6.1",
+        "dotenv": "^8.2.0",
+        "reflect-metadata": "^0.1.13",
+        "tslib": "^1.11.1"
+    },
+    "devDependencies": {
+        "del-cli": "^3.0.0",
+        "typescript": "^3.8.3"
+    },
+    "scripts": {
+        "all": "npm run clean && npm run build && npm run start",
+        "start": "node ./build/app.js",
+        "build": "tsc",
+        "clean": "del-cli ./build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Fredi100/TesserektDiscordBots.git"
+    },
+    "author": "Alfred Emsenhuber",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/Fredi100/TesserektDiscordBots/issues"
+    },
+    "keywords": [
+        "discord",
+        "bot"
+    ],
+    "homepage": "https://github.com/Fredi100/TesserektDiscordBots#readme"
 }
