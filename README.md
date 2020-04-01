@@ -1,4 +1,5 @@
 # TesserektDiscordBots
+Using [discord.ts](https://github.com/OwenCalvin/discord.ts) from [OwenCalvin](https://github.com/OwenCalvin) as a framework
 
 For adding this bot to your server click following [Link](https://discordapp.com/api/oauth2/authorize?client_id=305034890011869194&permissions=537394240&scope=bot)
 
