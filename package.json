@@ -10,7 +10,7 @@
     "dependencies": {
         "@typeit/discord": "^1.0.3",
         "@types/node": "^13.7.7",
-        "discord.js": "^11.6.1",
+        "discord.js": "^12.2.0",
         "dotenv": "^8.2.0",
         "reflect-metadata": "^0.1.13",
         "tslib": "^1.11.1"
