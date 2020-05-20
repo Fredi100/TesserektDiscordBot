@@ -8,7 +8,7 @@
         "npm": ">=6.0.0"
     },
     "dependencies": {
-        "@typeit/discord": "^1.0.3",
+        "@typeit/discord": "^4.0.6",
         "@types/node": "^13.7.7",
         "discord.js": "^12.2.0",
         "dotenv": "^8.2.0",
