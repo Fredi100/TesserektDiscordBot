@@ -11,7 +11,7 @@
         "@typeit/discord": "^4.0.7",
         "@types/node": "^14.0.10",
         "discord.js": "^12.2.0",
-        "dotenv": "^8.2.0",
+        "dotenv": "^9.0.2",
         "reflect-metadata": "^0.1.13",
         "tslib": "^2.0.0"
     },
